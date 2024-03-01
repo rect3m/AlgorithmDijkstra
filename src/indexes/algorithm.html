@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Dijkstra Algorithm</title>
+  <link rel="stylesheet" href="../styles/buttons.css">
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+<body bgcolor="#ffdead">
+<main>
+  <h1 class="title" align="center">Dijkstra Algorithm</h1>
+
+  <div style="display: flex" align="center">
+    <div class="EnteredData" style="margin-left: 300px">
+
+      <h1 >InputData</h1>
+
+      <div>
+        <input id="inputData" placeholder="Enter graph data..." style="width: 380px; height: 30px; margin-bottom: 10px;"/>
+      </div>
+
+      <div>
+        <textarea id="resultInputData" rows="7" cols="50" readonly></textarea>
+      </div>
+
+      <!-- Кнопка для виклику алгоритму для введених даних -->
+      <button class="buttons" onclick="runDijkstra('inputData', 'resultInputData')">Do algorithm</button>
+    </div>
+
+    <div class="ReadyData" style="margin-left: 300px">
+
+      <h1 >ReadyData</h1>
+
+      <div>
+        <h3> Example</h3>
+      </div>
+
+      <div>
+        <h3> Node A: B: 3, C: 7</h3>
+      </div>
+
+      <div>
+        <h3> Node B: A: 2, C: 1, D: 5</h3>
+      </div>
+
+      <div>
+        <h3>  Node C: A: 4, B: 2, D: 6</h3>
+      </div>
+
+      <div>
+        <h3> Node D: B: 4, C: 1</h3>
+      </div>
+
+      <label for="startNode">Choose a starting node:</label>
+      <select id="startNode" style="margin-bottom: 10px">
+        <option value="A">A</option>
+        <option value="B">B</option>
+        <option value="C">C</option>
+        <option value="D">D</option>
+      </select>
+
+      <div>
+        <textarea id="resultReadyData" rows="7" cols="50" readonly></textarea>
+      </div>
+
+      <!-- Кнопка для виклику алгоритму для готових даних -->
+      <button class="buttons" onclick="runReadyDijkstra()"> Do algorithm </button>
+    </div>
+  </div>
+</main>
+
+<script src="../scripts/ReadyData.js"></script>
+<script src="../scripts/InputData.js"></script>
+
+</body>
+</html>
